@@ -10,5 +10,5 @@ const UserProvider = UserContext.Provider
 const UserCosumer = UserContext.Consumer
 
 // export provide and cosumer
-export {UserProvider, UserCosumer}
+export {UserProvider, UserCosumer, UserContext}
 

@@ -5,4 +5,4 @@ const ChannelContext = createContext()
 const ChannelProvider = ChannelContext.Provider
 const ChannelConsumer = ChannelContext.Consumer
 
-export { ChannelProvider, ChannelConsumer }
+export { ChannelProvider, ChannelConsumer, ChannelContext }

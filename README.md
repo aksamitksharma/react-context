@@ -111,5 +111,44 @@ export default EComponent;
  ```
  isn't it looks confusing as it's have so much nesting after using only two contexts, now think what will going to be if we will use more contexts?
 
+**Here <code>useContext</code> hooks is going to be introduced**
+useContext hooks simplifies the consuming all the values of the contexts.
+So, instead of changing the code in EComponent.js let's implement useContext in DComponent.js
 
+- First of all useContext accept context as a parameter so we have to export UserContext from UserContext.js and ChannelContext from ChannelContext.js
 
+UserContext.js
+```bash
+export {UserProvider, UserCosumer, UserContext}
+```
+
+ChannelContext.js
+```bash
+export { ChannelProvider, ChannelConsumer, ChannelContext }
+```
+
+now we can use both the contexts in useContext hook
+
+```bash
+import { useContext } from 'react';
+import { ChannelContext } from '../context/ChannelContext';
+import { UserContext } from '../context/UserContext';
+import EComponent from './EComponent';
+
+const DComponent = () => {
+  const user_value = useContext(UserContext)
+  const channel_value = useContext(ChannelContext)
+  return (
+    <div>
+      <EComponent />
+      <hr />
+      <h2>
+        <p> D Component and User value is - {user_value} </p>
+        <p> D Component and Channel value is - {channel_value} </p>
+      </h2>
+    </div>
+  )
+}
+export default DComponent;
+```
+Now you can see how useContexts simplies the consumption of shared values.

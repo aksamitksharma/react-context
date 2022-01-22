@@ -15,7 +15,7 @@ To solve this propblem we are using react context, it is in build feature of rea
 Let's start!
 ### Where to start?
 
-To start implementing context in react we have follow following steps:
+To start implementing context in react we have to follow following steps:
 
 1. **Create the context**
 2. **Provide a context value**

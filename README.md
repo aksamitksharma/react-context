@@ -8,9 +8,10 @@ This code will show you howto implement context API in react JS with a simple ex
 *Context* provides a way to pass data through the component tree without having to pass props down manually at every level.
 
 Assume that we have a component tree A,B,C,D,E and you want to pass data from A to E.
-Without using context API we have to do prop drilling it means we have to pass data at every level of components like A->B->C->D->E and it become more challenging if components have siblings. Also, may be component B,C,D does not needed that data but they have be aware of it.
+Without using context API we have to do prop drilling it means we have to pass data at every level of components like A->B->C->D->E and it becomes more challenging if components have siblings. 
+Also, may be component B,C,D does not needed that data but they need to be aware about it.
 
-To solve this propblem we are using react context, it is in build feature of react js.
+To solve this propblem we are using react context, it is in-built feature of react js.
 
 Let's start!
 ### Where to start?

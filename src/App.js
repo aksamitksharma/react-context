@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import AComponent from "./components/AComponent"
+import { UserProvider } from "./context/UserContext"
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {
+      /* 
+      wrap your root component on UserProvide component to share values in all components.
+      we have to pass value prop and value that we want to share
+      */
+      }
+      <UserProvider value="Shared value">
+        <AComponent />
+      </UserProvider>
     </div>
   );
 }

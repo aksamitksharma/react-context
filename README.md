@@ -151,4 +151,4 @@ const DComponent = () => {
 }
 export default DComponent;
 ```
-Now you can see how useContexts simplies the consumption of shared values.
+Now you can see how useContext simplies the consumption of shared values.
